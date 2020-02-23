@@ -12,11 +12,9 @@ print("Also please type the number beside the option not the name.")
 select_nation = False
 game_ended = False
 while not select_nation:
-  men.print_menu()
-  men.select()
-  select_nation = men.check_options()
+    men.print_menu()
+    men.select()
+    select_nation = men.check_options()
 while not game_ended:
-  gam.print_situation()
-  game_ended = gam.take_turn()
-
-  
+    gam.print_situation()
+    game_ended = gam.take_turn()
