@@ -1,10 +1,12 @@
 from stats import stat
-from menus import menu
-from game import game
+from menus import Menu
+from game import Game
+
 
 current_stats = stat()
-men = menu(current_stats)
-gam = game(current_stats)
+men = Menu(current_stats)
+gam = Game(current_stats)
+
 
 print("Welcome to Bravery and Malice.")
 print("Please choose a option.")
@@ -14,7 +16,7 @@ game_ended = False
 while not select_nation:
     men.print_menu()
     men.select()
-    select_nation = men.check_options()
+    select_nation = men.check_options(gam.options)
 while not game_ended:
     gam.print_situation()
     game_ended = gam.take_turn()
